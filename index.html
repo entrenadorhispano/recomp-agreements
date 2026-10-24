@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="la">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -85,6 +85,56 @@
         line-height: 1.8;
       }
 
+      .surprise {
+        width: min(100%, 560px);
+        margin: clamp(40px, 8vw, 76px) auto 0;
+        text-align: center;
+      }
+
+      .artwork {
+        overflow: hidden;
+        border: 1px solid #fff;
+        background: #101010;
+      }
+
+      .artwork svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .surprise p {
+        min-height: 1.5em;
+        margin: 18px 0;
+        color: #e5e5e5;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 1.1rem;
+      }
+
+      .surprise button {
+        min-height: 48px;
+        padding: 12px 20px;
+        border: 2px solid #fff;
+        background: #fff;
+        color: #000;
+        font: inherit;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .surprise button:hover {
+        background: #000;
+        color: #fff;
+      }
+
+      .surprise button:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 4px;
+      }
+
       .footer {
         display: flex;
         justify-content: space-between;
@@ -131,7 +181,7 @@
     <main>
       <p class="eyebrow">Texto clásico · Edición 01</p>
       <h1>Lorem <span>ipsum.</span></h1>
-      <p class="copy">
+      <p class="copy" lang="la">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
         tincidunt, justo sed posuere consequat, neque sem tincidunt erat, at
         consequat sapien nibh vel justo. Curabitur vitae lectus eu magna
@@ -139,10 +189,88 @@
         tempor, arcu nec varius posuere, augue justo hendrerit neque, vitae
         blandit magna erat id urna.
       </p>
+      <section class="surprise" aria-label="Galería de imágenes divertidas">
+        <div class="artwork" id="funny-image">
+          <svg
+            id="space-cat"
+            viewBox="0 0 560 360"
+            role="img"
+            aria-labelledby="cat-title"
+          >
+            <title id="cat-title">Un gato astronauta flotando entre estrellas</title>
+            <rect width="560" height="360" fill="#101010" />
+            <circle cx="84" cy="74" r="4" fill="#fff" />
+            <circle cx="470" cy="70" r="5" fill="#fff" />
+            <circle cx="438" cy="270" r="3" fill="#fff" />
+            <path d="m123 123 8 18 20 2-15 13 4 20-17-10-17 10 4-20-15-13 20-2z" fill="#ffda44" />
+            <path d="m450 135 5 11 12 1-9 8 3 12-11-6-10 6 2-12-9-8 12-1z" fill="#ffda44" />
+            <g transform="rotate(-10 280 190)">
+              <path d="M209 228c-35 19-48 47-36 68 12 18 42 8 66-17m112-51c35 19 48 47 36 68-12 18-42 8-66-17" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="12" />
+              <path d="M215 214c0-35 29-63 65-63s65 28 65 63v54c0 31-29 51-65 51s-65-20-65-51z" fill="#f0a72e" stroke="#fff" stroke-width="5" />
+              <path d="M224 168 218 121l43 28m37 0 43-28-6 47" fill="#f0a72e" stroke="#fff" stroke-linejoin="round" stroke-width="5" />
+              <path d="m230 133 26 17-28 4zm80 0-26 17 28 4z" fill="#ff8da1" />
+              <circle cx="258" cy="205" r="6" fill="#111" />
+              <circle cx="302" cy="205" r="6" fill="#111" />
+              <path d="M269 221q11 11 22 0m-11 0v8m0 0q-9 10-17 0m17 0q9 10 17 0" fill="none" stroke="#111" stroke-linecap="round" stroke-width="3" />
+              <path d="M236 219h-24m24 7-25 7m112-14h24m-24 7 25 7" fill="none" stroke="#111" stroke-linecap="round" stroke-width="2" />
+              <circle cx="280" cy="260" r="27" fill="#81e6d9" stroke="#fff" stroke-width="4" />
+              <path d="M267 260h26m-13-13v26" stroke="#111" stroke-linecap="round" stroke-width="4" />
+              <path d="M217 183c-14-18-13-41 2-56 15-14 39-12 53 3m71 53c14-18 13-41-2-56-15-14-39-12-53 3" fill="none" stroke="#fff" stroke-width="8" />
+            </g>
+            <text x="280" y="338" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" text-anchor="middle">SPACE CAT · MEOWMISSION</text>
+          </svg>
+          <svg
+            id="banana-duck"
+            viewBox="0 0 560 360"
+            role="img"
+            aria-labelledby="duck-title"
+            hidden
+          >
+            <title id="duck-title">Un pato con gafas montado en un plátano</title>
+            <rect width="560" height="360" fill="#101010" />
+            <circle cx="90" cy="92" r="4" fill="#fff" />
+            <circle cx="465" cy="78" r="5" fill="#fff" />
+            <circle cx="442" cy="256" r="3" fill="#fff" />
+            <path d="M135 277q145-100 290 0-145 80-290 0" fill="#ffda44" stroke="#fff" stroke-linejoin="round" stroke-width="5" />
+            <path d="m135 277-18-10 5 20 19 4m284-14 18-10-5 20-19 4" fill="#f0a72e" stroke="#fff" stroke-linejoin="round" stroke-width="4" />
+            <path d="M252 232c-30-23-39-70-21-106 13-28 44-41 72-27 24 12 37 39 31 66l-9 44-73 23z" fill="#fff" stroke="#fff" stroke-width="4" />
+            <path d="M250 119c-19-11-29-25-21-38 8-12 25-2 35 9" fill="none" stroke="#ffda44" stroke-linecap="round" stroke-width="9" />
+            <path d="M221 139c-29-11-45-5-49 6-3 9 14 15 41 13m116-19c28-9 43-3 45 8 2 9-14 14-39 11" fill="#ffda44" stroke="#fff" stroke-linejoin="round" stroke-width="4" />
+            <path d="M249 168h40m8 0h37m-45 0h8" fill="none" stroke="#111" stroke-linecap="round" stroke-width="7" />
+            <circle cx="270" cy="168" r="18" fill="#81e6d9" fill-opacity=".55" stroke="#111" stroke-width="5" />
+            <circle cx="320" cy="168" r="18" fill="#81e6d9" fill-opacity=".55" stroke="#111" stroke-width="5" />
+            <path d="m288 168 7-5 7 5m-37 36q18 17 36 0" fill="none" stroke="#111" stroke-linecap="round" stroke-width="4" />
+            <path d="m288 185 24 10-25 12z" fill="#ff8b42" stroke="#fff" stroke-linejoin="round" stroke-width="3" />
+            <path d="M274 218q-6 19-25 23m65-27q12 18 27 15" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="7" />
+            <path d="M254 242q25 19 52 0" fill="none" stroke="#111" stroke-linecap="round" stroke-width="3" />
+            <path d="m172 104 5 11 12 1-9 8 3 12-11-6-10 6 2-12-9-8 12-1z" fill="#ffda44" />
+            <text x="280" y="338" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="4" text-anchor="middle">BANANA EXPRESS · QUACK QUACK</text>
+          </svg>
+        </div>
+        <p id="image-caption" aria-live="polite">¡Un gato astronauta en una misión maull espacial!</p>
+        <button type="button" id="change-image" aria-controls="funny-image">
+          ¡Sorpresa! Cambiar imagen
+        </button>
+      </section>
       <footer class="footer">
         <span>Dolor sit amet</span>
         <span>Una pausa para leer</span>
       </footer>
     </main>
+    <script>
+      const spaceCat = document.querySelector("#space-cat");
+      const bananaDuck = document.querySelector("#banana-duck");
+      const caption = document.querySelector("#image-caption");
+      const changeImageButton = document.querySelector("#change-image");
+
+      changeImageButton.addEventListener("click", () => {
+        const showDuck = !spaceCat.hasAttribute("hidden");
+        spaceCat.toggleAttribute("hidden", showDuck);
+        bananaDuck.toggleAttribute("hidden", !showDuck);
+        caption.textContent = showDuck
+          ? "¡Un pato con gafas en su plátano-móvil!"
+          : "¡Un gato astronauta en una misión maull espacial!";
+      });
+    </script>
   </body>
 </html>
